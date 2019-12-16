@@ -313,29 +313,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="JSon_manageData\User.h" />
-    <ClInclude Include="JSon_manageData\WorkDays.h" />
-    <ClInclude Include="ReleaseNotesPage.xaml.h">
+    <ClInclude Include="..\MisHorariosCpp_UWP\JSon_manageData\User.h" />
+    <ClInclude Include="..\MisHorariosCpp_UWP\JSon_manageData\WorkDays.h" />
+    <ClInclude Include="..\MisHorariosCpp_UWP\ReleaseNotesPage.xaml.h">
       <DependentUpon>ReleaseNotesPage.xaml</DependentUpon>
     </ClInclude>
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Sample-Utils\Helpers.h" />
-    <ClInclude Include="WelcomePage.xaml.h">
+    <ClInclude Include="..\MisHorariosCpp_UWP\resource.h" />
+    <ClInclude Include="..\MisHorariosCpp_UWP\Sample-Utils\Helpers.h" />
+    <ClInclude Include="..\MisHorariosCpp_UWP\WelcomePage.xaml.h">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </ClInclude>
-    <ClInclude Include="HorariosPage.xaml.h">
+    <ClInclude Include="..\MisHorariosCpp_UWP\HorariosPage.xaml.h">
       <DependentUpon>HorariosPage.xaml</DependentUpon>
     </ClInclude>
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="App.xaml.h">
+    <ClInclude Include="..\MisHorariosCpp_UWP\pch.h" />
+    <ClInclude Include="..\MisHorariosCpp_UWP\App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
     </ClInclude>
-    <ClInclude Include="MainPage.xaml.h">
+    <ClInclude Include="..\MisHorariosCpp_UWP\MainPage.xaml.h">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <ApplicationDefinition Include="..\MisHorariosCpp_UWP\App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="ReleaseNotesPage.xaml">
@@ -347,7 +347,7 @@
     <Page Include="HorariosPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="..\MisHorariosCpp_UWP\MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
@@ -449,25 +449,25 @@
     <Image Include="Assets\Wide310x150Logo.scale-400.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="App.xaml.cpp">
+    <ClCompile Include="..\MisHorariosCpp_UWP\App.xaml.cpp">
       <DependentUpon>App.xaml</DependentUpon>
     </ClCompile>
-    <ClCompile Include="JSon_manageData\User.cpp" />
-    <ClCompile Include="JSon_manageData\WorkDays.cpp" />
-    <ClCompile Include="ReleaseNotesPage.xaml.cpp">
+    <ClCompile Include="..\MisHorariosCpp_UWP\JSon_manageData\User.cpp" />
+    <ClCompile Include="..\MisHorariosCpp_UWP\JSon_manageData\WorkDays.cpp" />
+    <ClCompile Include="..\MisHorariosCpp_UWP\ReleaseNotesPage.xaml.cpp">
       <DependentUpon>ReleaseNotesPage.xaml</DependentUpon>
     </ClCompile>
-    <ClCompile Include="Sample-Utils\Helpers.cpp" />
-    <ClCompile Include="WelcomePage.xaml.cpp">
+    <ClCompile Include="..\MisHorariosCpp_UWP\Sample-Utils\Helpers.cpp" />
+    <ClCompile Include="..\MisHorariosCpp_UWP\WelcomePage.xaml.cpp">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </ClCompile>
-    <ClCompile Include="HorariosPage.xaml.cpp">
+    <ClCompile Include="..\MisHorariosCpp_UWP\HorariosPage.xaml.cpp">
       <DependentUpon>HorariosPage.xaml</DependentUpon>
     </ClCompile>
-    <ClCompile Include="MainPage.xaml.cpp">
+    <ClCompile Include="..\MisHorariosCpp_UWP\MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="..\MisHorariosCpp_UWP\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -477,13 +477,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MisHorariosCpp_UWP.rc" />
+    <ResourceCompile Include="..\MisHorariosCpp_UWP\MisHorariosCpp_UWP.rc" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="WindowsMobile, Version=10.0.10586.0" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MisHorariosCpp_UWP_TemporaryKey.pfx" />
+    <None Include="..\MisHorariosCpp_UWP\MisHorariosCpp_UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Package.StoreAssociation.xml" />

@@ -10,7 +10,7 @@ using namespace Windows::UI::Xaml::Controls;
 using namespace Windows::UI::Xaml::Interop;
 using namespace Windows::System::Profile;
 
-static String^ CurrentVersionNumber = "1.47";
+static String^ CurrentVersionNumber = "v1.47";
 
 ReleaseNotesPage::ReleaseNotesPage()
 {
