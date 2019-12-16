@@ -1,46 +1,50 @@
 ﻿#include "pch.h"
-
 #include "MainPage.xaml.h"
-#include "MisHorariosCpp_UWP_MAINAPP.xaml.h"
+#include "WelcomePage.xaml.h"
 
-using namespace PaatyDSM;
-
+using namespace MisHorariosCpp_UWP;
+using namespace std;
+using namespace Windows::Foundation;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Interop;
-using namespace Windows::Foundation;
+using namespace Platform;
+using namespace Windows::UI::Xaml::Navigation;
+using namespace Windows::UI::ViewManagement;
+using namespace Windows::System::Profile;
 
-// Holds the Status Block and the Frame in which all the pages are loaded.
+// Referencia al Frame en el cual todas las páginas son cargadas.
 MainPage^ MainPage::Current = nullptr;
 
+// Main
 MainPage::MainPage()
 {
 	InitializeComponent();
 
-	// This is a static public property that allows downstream pages to get a handle to the MainPage instance
-	// in order to call methods that are in this class.
+	// This is a static public property that allows downstream pages to get a handle
+	// to the MainPage instance in order to call methods that are in this class.
 	MainPage::Current = this;
-
-	// Called when Hardware Back Button is pressed
-	HardwareButtons::BackPressed += ref new EventHandler<BackPressedEventArgs ^>(this, &MainPage::HardwareButtons_BackPressed);
 }
 
 // OnNavigatedTo function
 void MainPage::OnNavigatedTo(NavigationEventArgs^ e)
 {
-	SuspensionManager::RegisterFrame(Page_Frame, "PaatyDSM.MisHorariosCpp_UWP_MAINAPP");
+	// Set fullscreen on mobile devices and tablets.
+	SetFullScreenModeON(0);
 
-	///Specific Fix (bug#6161012), (bug#6161013) & AfterSuspensionRandomCrash.
+	// Set windows size.
+	ApplicationView^ view = ApplicationView::GetForCurrentView();
+    	view->TryResizeView(Size(500, 680));
+	view->SetPreferredMinSize(Size(500, 840));
+
+	// When the navigation stack isn't restored navigate to the WelcomePage
 	if (Page_Frame->Content == nullptr)
 	{
-		// When the navigation stack isn't restored navigate to the MisHorariosCpp_UWP_MAINAPP
-		if (!Page_Frame->Navigate(TypeName{ "PaatyDSM.MisHorariosCpp_UWP_MAINAPP", TypeKind::Custom }))
+		if (!Page_Frame->Navigate(TypeName{ "MisHorariosCpp_UWP.WelcomePage", TypeKind::Custom }))
 		{
-			throw ref new FailureException("Fallo al iniciar la App :(\n.\nCodigo de error: \n#31326497.\nContacte al editor de la aplicación\ne incluya el #codigo de error.");
+			// Show navigation error
+			Frame->Background = ref new SolidColorBrush(Windows::UI::Colors::Gray);
+			NotifyUser("Hubo un problema al cargar la página principal.", NotifyType::ErrorMessage);
 		}
-	}
-	else
-	{
-		// null
 	}
 }
 
@@ -54,6 +58,9 @@ void MainPage::NotifyUser(String^ strMessage, NotifyType type)
 		break;
 	case NotifyType::ErrorMessage:
 		StatusBorder->Background = ref new SolidColorBrush(Windows::UI::Colors::Red);
+		break;
+	case NotifyType::DebugMessage:
+		StatusBorder->Background = ref new SolidColorBrush(Windows::UI::Colors::Yellow);
 		break;
 	default:
 		break;
@@ -71,29 +78,38 @@ void MainPage::NotifyUser(String^ strMessage, NotifyType type)
 	}
 }
 
-// On Hardware Back Button press
-void MainPage::HardwareButtons_BackPressed(Object^ sender, Windows::Phone::UI::Input::BackPressedEventArgs^ e)
+// Set fullscreen
+/// <summary>
+/// Launch UWP apps in full-screen mode on mobile devices and tablets, desktop or both.
+/// </summary>
+/// <param name="device">0 for Mobile and Tablets, 1 for PC and 2 for both platforms</param>
+void MainPage::SetFullScreenModeON(int device)
 {
-	if (this->Page_Frame->CanGoBack)
+	String^ platformFamily = AnalyticsInfo::VersionInfo->DeviceFamily;
+
+	if (device == 0)
 	{
-		e->Handled = true;
-
-		// Clear the status block when navigating
-			NotifyUser("", NotifyType::StatusMessage);
-
-		///Specific Fix (bug#6161022)
-		// Clear the navigation stacks using the Clear method of each stack.
-			Page_Frame->BackStack->Clear();
+		if (platformFamily->Equals("Windows.Mobile"))
+		{
+			ApplicationView^ view = ApplicationView::GetForCurrentView();
+			view->TryEnterFullScreenMode();
+		}
 	}
-	else
+	else if (device == 1)
 	{
-		e->Handled = false;
+		if (platformFamily->Equals("Windows.Desktop"))
+		{
+			ApplicationView^ view = ApplicationView::GetForCurrentView();
+			view->TryEnterFullScreenMode();
+		}
+	}
+	else if (device == 2)
+	{
+		ApplicationView^ view = ApplicationView::GetForCurrentView();
+		view->TryEnterFullScreenMode();
 	}
 
-	///Specific Fix (bug#6161022)
-	// Back to MainPage
-		Page_Frame->Navigate(TypeName{ "PaatyDSM.MisHorariosCpp_UWP_MAINAPP", TypeKind::Custom });
-
-	// Clear the navigation stacks using the Clear method of each stack.
-		Page_Frame->BackStack->Clear();
+		
 }
+
+

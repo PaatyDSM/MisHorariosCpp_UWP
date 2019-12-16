@@ -3,7 +3,7 @@
 #include "Sample-Utils\PlugInFilter.h"
 #include <ppltasks.h>
 
-using namespace PaatyDSM;
+using namespace Sample_Utils;
 
 using namespace Concurrency;
 using namespace Platform;

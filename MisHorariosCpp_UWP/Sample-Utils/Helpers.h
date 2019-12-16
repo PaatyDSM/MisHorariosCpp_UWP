@@ -6,7 +6,7 @@ using namespace concurrency;
 using namespace Windows::UI::Xaml::Controls;
 using namespace Windows::Web::Http;
 
-namespace PaatyDSM
+namespace MisHorariosCpp_UWP
 {
 	class Helpers
 	{
@@ -15,8 +15,5 @@ namespace PaatyDSM
 		static task<HttpResponseMessage^> DisplayTextResultAsync(
 			HttpResponseMessage^ response,
 			TextBox^ output);
-
-		static HttpClient^ CreateHttpClient();
-		
 	};
 }

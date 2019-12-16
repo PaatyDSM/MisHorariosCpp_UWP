@@ -6,7 +6,7 @@ using namespace Windows::Foundation;
 using namespace Windows::Web::Http;
 using namespace Windows::Web::Http::Filters;
 
-namespace PaatyDSM
+namespace Sample_Utils
 {
 	public ref class PlugInFilter sealed : public IHttpFilter
 	{

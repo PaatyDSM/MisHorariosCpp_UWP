@@ -1,25 +1,36 @@
 ﻿<Page
-    x:Class="PaatyDSM.MainPage"
+    x:Class="MisHorariosCpp_UWP.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="using:PaatyDSM"
     mc:Ignorable="d">
 
-    <Grid Background="white">
+    <Grid>
         <Grid.RowDefinitions>
-            <!-- Page_Frame -->
-            <RowDefinition Height="*"/>
-            <!-- StatusBlock -->
-            <RowDefinition Height="Auto"/>
+            <!--  Page_Frame  -->
+            <RowDefinition Height="*" />
+            <!--  StatusBlock  -->
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <!-- Here is loaded all the pages of the program -->
-        <Frame x:Name="Page_Frame" Grid.Row="0" Margin="0"/>
-        <!-- Status and error messages block -->
-        <Border x:Name="StatusBorder" Grid.Row="1" Visibility="Collapsed">
-            <TextBlock x:Name="StatusBlock" Foreground="White" FontWeight="Bold" Margin="12, 10, 12, 10" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+
+        <!--  Aquí son cargadas todas las páginas del programa  -->
+        <Frame x:Name="Page_Frame" />
+
+        <!--  Bloque para mensajes de estado y de error  -->
+        <Border
+            x:Name="StatusBorder"
+            Grid.Row="1"
+            Visibility="Collapsed">
+
+            <TextBlock
+                x:Name="StatusBlock"
+                Margin="8"
+                HorizontalAlignment="Center"
+                FontWeight="Bold"
+                Foreground="White"
+                TextWrapping="Wrap" />
         </Border>
-        
+
     </Grid>
 </Page>

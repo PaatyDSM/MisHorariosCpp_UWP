@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Common">
-      <UniqueIdentifier>be0e901b-ae5e-4505-8dde-39bd68504f5d</UniqueIdentifier>
-    </Filter>
     <Filter Include="Assets">
       <UniqueIdentifier>c6578651-9257-48d0-9b27-6750704d33f8</UniqueIdentifier>
       <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
@@ -14,6 +11,9 @@
     <Filter Include="Assets\pictures">
       <UniqueIdentifier>{90b34fe1-d4b3-492c-adb5-01841f2e4bbe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="JSon_manageData">
+      <UniqueIdentifier>{20262345-d0af-4baa-949d-917297a4386b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -23,17 +23,15 @@
     <ClCompile Include="MainPage.xaml.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="HorariosPage.xaml.cpp" />
-    <ClCompile Include="Common\SuspensionManager.cpp">
-      <Filter>Common</Filter>
+    <ClCompile Include="ReleaseNotesPage.xaml.cpp" />
+    <ClCompile Include="WelcomePage.xaml.cpp" />
+    <ClCompile Include="JSon_manageData\User.cpp">
+      <Filter>JSon_manageData</Filter>
     </ClCompile>
-    <ClCompile Include="MisHorariosCpp_UWP_MAINAPP.xaml.cpp" />
-    <ClCompile Include="School.cpp" />
-    <ClCompile Include="User.cpp" />
-    <ClCompile Include="ReleaseNotes.xaml.cpp" />
+    <ClCompile Include="JSon_manageData\WorkDays.cpp">
+      <Filter>JSon_manageData</Filter>
+    </ClCompile>
     <ClCompile Include="Sample-Utils\Helpers.cpp">
-      <Filter>Sample-Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="Sample-Utils\PlugInFilter.cpp">
       <Filter>Sample-Utils</Filter>
     </ClCompile>
   </ItemGroup>
@@ -42,18 +40,16 @@
     <ClInclude Include="App.xaml.h" />
     <ClInclude Include="MainPage.xaml.h" />
     <ClInclude Include="HorariosPage.xaml.h" />
-    <ClInclude Include="Common\SuspensionManager.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="MisHorariosCpp_UWP_MAINAPP.xaml.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="School.h" />
-    <ClInclude Include="User.h" />
-    <ClInclude Include="ReleaseNotes.xaml.h" />
-    <ClInclude Include="Sample-Utils\Helpers.h">
-      <Filter>Sample-Utils</Filter>
+    <ClInclude Include="ReleaseNotesPage.xaml.h" />
+    <ClInclude Include="WelcomePage.xaml.h" />
+    <ClInclude Include="JSon_manageData\User.h">
+      <Filter>JSon_manageData</Filter>
     </ClInclude>
-    <ClInclude Include="Sample-Utils\PlugInFilter.h">
+    <ClInclude Include="JSon_manageData\WorkDays.h">
+      <Filter>JSon_manageData</Filter>
+    </ClInclude>
+    <ClInclude Include="Sample-Utils\Helpers.h">
       <Filter>Sample-Utils</Filter>
     </ClInclude>
   </ItemGroup>
@@ -71,9 +67,6 @@
       <Filter>Assets</Filter>
     </Image>
     <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="Assets\StoreLogo.png">
       <Filter>Assets</Filter>
     </Image>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
@@ -100,24 +93,187 @@
     <Image Include="Assets\Square44x44Logo.targetsize-256.png">
       <Filter>Assets</Filter>
     </Image>
-    <Image Include="Assets\pictures\logo_main.png">
+    <Image Include="Assets\pictures\Welcome_background.png">
       <Filter>Assets\pictures</Filter>
+    </Image>
+    <Image Include="Assets\pictures\Horarios_background.png">
+      <Filter>Assets\pictures</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-16.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-32.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-48.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\BadgeLogo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\BadgeLogo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\BadgeLogo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\BadgeLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\BadgeLogo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallTile.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallTile.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallTile.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallTile.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallTile.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.targetsize-16.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.targetsize-24.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.targetsize-32.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.targetsize-48.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.targetsize-256.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.altform-unplated_targetsize-16.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.altform-unplated_targetsize-24.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.altform-unplated_targetsize-32.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.altform-unplated_targetsize-48.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo_altform-unplated.altform-unplated_targetsize-256.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LargeTile.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LargeTile.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LargeTile.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LargeTile.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LargeTile.scale-400.png">
+      <Filter>Assets</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="MisHorariosCpp_UWP_TemporaryKey.pfx" />
+    <None Include="MisHorariosCpp_UWP_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <Page Include="MainPage.xaml" />
     <Page Include="HorariosPage.xaml" />
-    <Page Include="MisHorariosCpp_UWP_MAINAPP.xaml" />
-    <Page Include="Styles.xaml" />
-    <Page Include="ReleaseNotes.xaml" />
+    <Page Include="ReleaseNotesPage.xaml" />
+    <Page Include="WelcomePage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MisHorariosCpp_UWP.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="MisHorariosCpp_UWP_TemporaryKey.pfx" />
   </ItemGroup>
 </Project>

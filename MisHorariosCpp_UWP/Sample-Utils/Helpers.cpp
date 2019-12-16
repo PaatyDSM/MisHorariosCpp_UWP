@@ -3,9 +3,7 @@
 #include "Sample-Utils\Helpers.h"
 #include <MainPage.xaml.h>
 
-#include <Sample-Utils\PlugInFilter.h>
-
-using namespace PaatyDSM;
+using namespace MisHorariosCpp_UWP;
 
 using namespace concurrency;
 using namespace Windows::UI::Xaml::Controls;
@@ -33,16 +31,3 @@ task<HttpResponseMessage^> Helpers::DisplayTextResultAsync(
 		task_continuation_context::use_current());
 }
 
-HttpClient^ Helpers::CreateHttpClient()
-{
-    // HttpClient functionality can be extended by plugging multiple filters together and providing
-    // HttpClient with the configured filter pipeline.
-    IHttpFilter^ filter = ref new HttpBaseProtocolFilter();
-    filter = ref new PlugInFilter(filter); // Adds a custom header to every request and response message.
-    HttpClient^ httpClient = ref new HttpClient(filter);
-
-    // Sets a "User-Agent" request header as a default header on the HttpClient instance.
-	httpClient->DefaultRequestHeaders->UserAgent->Append(ref new HttpProductInfoHeaderValue("Mozilla/5.0; PaatyDSM Apps"));
-
-    return httpClient;
-}

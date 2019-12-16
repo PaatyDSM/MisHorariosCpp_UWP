@@ -1,22 +1,22 @@
 ﻿#pragma once
 
 #include "MainPage.g.h"
-#include "MainPage.xaml.h"
 
-using namespace Platform;
-using namespace Windows::UI::Xaml::Navigation;
-using namespace Windows::Phone::UI::Input;
-
-namespace PaatyDSM
+namespace MisHorariosCpp_UWP
 {
+	/// <summary>
+	/// Enumera los tipos de notificación de estado.
+	/// </summary>
 	public enum class NotifyType
 	{
 		StatusMessage,
-		ErrorMessage
+		ErrorMessage,
+		DebugMessage
 	};
 
 	/// <summary>
-	/// MainPage holds the Status Block and the Frame in which all the pages are loaded.
+	/// MainPage contiene el "Frame" en el cual todas las páginas son cargadas y el
+	/// "StatusBlock" que notifica los distintos tipos de mensaje al usuario.
 	/// </summary>
 	public ref class MainPage sealed
 	{
@@ -27,10 +27,11 @@ namespace PaatyDSM
 		virtual void OnNavigatedTo(NavigationEventArgs^ e) override;
 
 	private:
-		void HardwareButtons_BackPressed(Object^ sender, Windows::Phone::UI::Input::BackPressedEventArgs^ e);
+		void SetFullScreenModeON(int device);
 
 	internal:
 		static MainPage^ Current;
 		void NotifyUser(String^ strMessage, NotifyType type);
+		
 	};
 }

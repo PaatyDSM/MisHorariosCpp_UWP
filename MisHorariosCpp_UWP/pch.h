@@ -4,6 +4,7 @@
 //
 
 #pragma once
+
 #include <collection.h>
 #include <sstream>
 #include <ppltasks.h>
@@ -11,7 +12,6 @@
 #include <wrl.h>
 
 #include "App.xaml.h"
-#include "Common\SuspensionManager.h"
 
-#include "User.h"
-#include "School.h"
+#include "JSon_manageData\User.h"
+#include "JSon_manageData\WorkDays.h"
