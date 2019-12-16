@@ -102,7 +102,7 @@
         <Grid x:Name="ContentPanelInfo"
               Grid.Row="1"
               Visibility="Collapsed"
-              HorizontalAlignment="Center">
+              HorizontalAlignment="Stretch">
 
             <!-- ColumnDefinitions -->
             <Grid.ColumnDefinitions>

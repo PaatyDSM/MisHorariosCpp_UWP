@@ -107,5 +107,5 @@ void App::OnNavigationFailed(Platform::Object ^sender, NavigationFailedEventArgs
 {
 	/// <param name="sender">Marco que produjo el error de navegación</param>
 	/// <param name="e">Detalles sobre el error de navegación</param>
-	throw ref new FailureException("Error al cargar la página \"" + e->SourcePageType.Name + "\"");
+	throw ref new FailureException("Error al cargar la siguiente página: \"" + e->SourcePageType.Name + "\"");
 }

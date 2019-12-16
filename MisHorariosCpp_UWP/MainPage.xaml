@@ -12,6 +12,8 @@
             <RowDefinition Height="*" />
             <!--  StatusBlock  -->
             <RowDefinition Height="Auto" />
+            <!--  FooterPanelV3  -->
+            <RowDefinition Height="0" />
         </Grid.RowDefinitions>
 
         <!--  Aquí son cargadas todas las páginas del programa  -->
@@ -31,6 +33,14 @@
                 Foreground="White"
                 TextWrapping="Wrap" />
         </Border>
+
+        <!--  FooterPanelV3  -->
+        <Grid
+            x:Name="FooterPanelV3"
+            Grid.Row="2"
+            Height="38"
+            Background="Transparent">
+        </Grid>
 
     </Grid>
 </Page>

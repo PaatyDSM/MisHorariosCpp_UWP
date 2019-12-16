@@ -263,11 +263,6 @@
     <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MisHorariosCpp_UWP_TemporaryKey.pfx" />
-    <None Include="MisHorariosCpp_UWP_StoreKey.pfx" />
-    <None Include="Package.StoreAssociation.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="MainPage.xaml" />
     <Page Include="HorariosPage.xaml" />
     <Page Include="ReleaseNotesPage.xaml" />
@@ -275,5 +270,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MisHorariosCpp_UWP.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MisHorariosCpp_UWP_TemporaryKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
 </Project>

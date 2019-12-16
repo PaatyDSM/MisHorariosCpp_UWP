@@ -180,7 +180,7 @@
                 FontFamily="Consolas"
                 FontSize="14"
                 Foreground="Black"
-                ToolTipService.ToolTip="Ver notas" />
+                ToolTipService.ToolTip="Historial de cambios" />
 
             <!--  Webpage  -->
             <HyperlinkButton
@@ -190,8 +190,8 @@
                 Content="PaatyDSM Apps"
                 FontFamily="Segoe Script"
                 FontSize="20"
-                Tag="http://paatydsm.000webhostapp.com"
-                ToolTipService.ToolTip="Visitar sitio Web" />
+                Tag="https://www.instagram.com/paatydsm/"
+                ToolTipService.ToolTip="Visitarme" />
 
             <!--  E-mail Link  -->
             <HyperlinkButton
@@ -203,7 +203,7 @@
                 Content="Contacto"
                 FontSize="13"
                 Tag="mailto:paaty.dsm@gmail.com?Subject=PaatyDSM Apps - MAIL"
-                ToolTipService.ToolTip="Enviar un mail" />
+                ToolTipService.ToolTip="Enviarme un mail" />
 
         </Grid>
 

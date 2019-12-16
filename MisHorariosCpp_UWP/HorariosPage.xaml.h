@@ -37,8 +37,8 @@ namespace MisHorariosCpp_UWP
 		void Backbutton1(Object^ sender, RoutedEventArgs^ e);
 		void GoPageBack(void);
 		void Footer_Click(Object^ sender, RoutedEventArgs^ e);
-		void save_legajo(string);
-		void save_cache(String^ e);
+		void save_last_legajo(string);
+		void save_cache(String^ e, string);
 		void read_cache(string, int database_error);
 	};
 }

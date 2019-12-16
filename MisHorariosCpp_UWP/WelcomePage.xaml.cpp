@@ -6,6 +6,7 @@
 #include <fstream>
 #include <thread>
 #include <pplawait.h>
+#include <string.h>
 
 using namespace MisHorariosCpp_UWP;
 using namespace std;
@@ -18,8 +19,8 @@ using namespace Windows::UI::Xaml::Controls;
 using namespace Windows::UI::Xaml::Interop;
 using namespace Windows::UI::Xaml::Media;
 
-static String^ CurrentVersionNumber = "1.33";
-static int CurrentVersionNumberInt = 133;
+static String^ CurrentVersionNumber = "v1.47";
+static int CurrentVersionNumberInt = 147;
 
 // Function start_fadein_animation
 void WelcomePage::WelcomePage::start_FadeInAnimation(void)
@@ -33,7 +34,7 @@ void WelcomePage::OnNavigatedTo(NavigationEventArgs^ e)
 	// A pointer back to the main page.  This is needed if you want to call methods in MainPage such as NotifyUser()
 	rootPage = MainPage::Current;
 
-	if (e->Content == "BackButtonPressed")
+	if (e->Content->ToString() == "BackButtonPressed")
 	{
 		// Clear errors
 		rootPage->NotifyUser("", NotifyType::StatusMessage);
@@ -46,7 +47,7 @@ void WelcomePage::OnNavigatedTo(NavigationEventArgs^ e)
 	read_legajo();
 
 	// Check for updates
-	CheckUpdates();
+	//CheckUpdates();
 
 }
 
@@ -101,12 +102,12 @@ void WelcomePage::send_legajo_button(Object^ sender, RoutedEventArgs^ e)
 	// If no input
 	if (str.length() == 0)
 	{
-		rootPage->NotifyUser("Primero debe ingresar un legajo.", NotifyType::ErrorMessage);
+		rootPage->NotifyUser("Primero tenés que ingresar un legajo.", NotifyType::ErrorMessage);
 	}
 	// If illegal character
 	else if (check != string::npos)
 	{
-		rootPage->NotifyUser("El legajo ingresado no es válido", NotifyType::ErrorMessage);
+		rootPage->NotifyUser("El legajo que ingresaste no es válido.", NotifyType::ErrorMessage);
 	}
 	// If valid
 	else

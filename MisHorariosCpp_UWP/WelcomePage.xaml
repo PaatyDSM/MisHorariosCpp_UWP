@@ -68,7 +68,7 @@
             <RowDefinition Height="*" />
             <!--  UpdatePanel  -->
             <RowDefinition Height="Auto" />
-            <!--  FooterPanelV2  -->
+            <!--  FooterPanelV3  -->
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
@@ -105,7 +105,7 @@
                 Foreground="#FFF5FAFF"
                 TextAlignment="Center"
                 TextWrapping="Wrap"
-                Text="Ingresá con tu número de legajo">
+                Text="Ingresá tu número de legajo">
             </TextBlock>
 
             <!--  InputPanel  -->
@@ -129,7 +129,7 @@
                         x:Name="textBlock"
                         Margin="0,0,6,0"
                         VerticalAlignment="Center"
-                        FontSize="22"
+                        FontSize="21"
                         Foreground="#FFE6FFF6"
                         Text="Legajo:"
                         TextWrapping="Wrap"/>
@@ -139,19 +139,35 @@
                         Grid.Column="1"
                         MinWidth="200"
                         HorizontalAlignment="Left"
-                        Background="#7F808080"
+                        Background="#90101010"
                         BorderBrush="#FF1C4B4B"
                         BorderThickness="1"
-                        FontSize="22"
-                        Foreground="Black"
+                        FontSize="21"
+                        Foreground="WhiteSmoke"
                         InputScope="Number"
                         MaxLength="12"
-                        PlaceholderText="  Escribe tu legajo"
+                        PlaceholderText=" Escribe tu legajo"
                         Text=""
                         TextAlignment="Center"
                         TextWrapping="Wrap"
                         TabIndex="1"
-			KeyDown="OnKeyDownHandler"/>
+			            KeyDown="OnKeyDownHandler">
+                        <TextBox.Resources>
+                            <ResourceDictionary>
+                                <ResourceDictionary.ThemeDictionaries>
+                                    <ResourceDictionary x:Key="Dark">
+                                        <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="#A0000000"/>
+
+                                        <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="#FF1C5B4B"/>
+                                        <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="#90202020"/>
+                                        <SolidColorBrush x:Key="TextControlForegroundFocused" Color="WhiteSmoke"/>
+                                        <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="#FF1F4F4F"/>
+                                        <SolidColorBrush x:Key="TextControlSelectionHighlightColor" Color="Orange"/>
+                                    </ResourceDictionary>
+                                </ResourceDictionary.ThemeDictionaries>
+                            </ResourceDictionary>
+                        </TextBox.Resources>
+                    </TextBox>
                 </Grid>
             </Grid>
 
@@ -206,8 +222,20 @@
                     FontSize="16"
                     FontWeight="Bold"
                     Foreground="LightGray"
+                    Background="Transparent"
                     RenderTransformOrigin="0.5,0.5"
                     TabIndex="2">
+                    <Button.Resources>
+                        <ResourceDictionary>
+                            <ResourceDictionary.ThemeDictionaries>
+                                <ResourceDictionary x:Key="Dark">
+                                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                </ResourceDictionary>
+                            </ResourceDictionary.ThemeDictionaries>
+                        </ResourceDictionary>
+                    </Button.Resources>
                     <Button.RenderTransform>
                         <CompositeTransform ScaleX="1.1" ScaleY="1.2" />
                     </Button.RenderTransform>
@@ -233,9 +261,9 @@
             </TextBlock>
         </Grid>
         
-        <!--  FooterPanelV2  -->
+        <!--  FooterPanelV3  -->
         <Grid
-            x:Name="FooterPanelV2"
+            x:Name="FooterPanelV3"
             Grid.Row="2"
             Height="38"
             Background="#FFBEBEBE">
@@ -255,14 +283,27 @@
                 x:Name="FP_VersionButton"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Stretch"
-                Background="{x:Null}"
+                Background="Transparent"
+                BorderBrush="Transparent"
                 Click="start_ReleaseNotesFadeOutAnimation"
                 Content="vN.NN"
                 FontFamily="Consolas"
-                FontSize="14"
+                FontSize="13"
                 Foreground="Black"
-                ToolTipService.ToolTip="Ver notas"
-                TabIndex="4" />
+                ToolTipService.ToolTip="Historial de cambios"
+                TabIndex="4"
+                Margin="0,0,0,-4">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+            </Button>
 
             <!--  Webpage  -->
             <HyperlinkButton
@@ -272,21 +313,21 @@
                 Content="PaatyDSM Apps"
                 FontFamily="Segoe Script"
                 FontSize="20"
-                Tag="https://paatydsm.000webhostapp.com"
-                ToolTipService.ToolTip="Visitar sitio Web"
+                Tag="https://www.instagram.com/paatydsm/"
+                ToolTipService.ToolTip="Visitarme"
                 TabIndex="3" />
 
             <!--  E-mail Link  -->
             <HyperlinkButton
                 x:Name="FP_EmailButton"
                 Grid.Column="2"
-                HorizontalAlignment="Stretch"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Stretch"
                 Click="Footer_Click"
                 Content="Contacto"
                 FontSize="13"
-                Tag="mailto:paaty.dsm@gmail.com?Subject=PaatyDSM Apps - MAIL"
-                ToolTipService.ToolTip="Enviar un mail"
+                Tag="mailto:paaty.dsm@gmail.com?Subject=PaatyDSM Apps - SBXHORARIOSUWP"
+                ToolTipService.ToolTip="Enviarme un mail"
                 TabIndex="5" />
 
         </Grid>

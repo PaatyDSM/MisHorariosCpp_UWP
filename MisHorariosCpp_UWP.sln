@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27019.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MisHorariosCpp_UWP", "MisHorariosCpp_UWP\MisHorariosCpp_UWP.vcxproj", "{BE0E901B-AE5E-4505-8DDE-39BD68504F5D}"
 EndProject
@@ -15,9 +15,9 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BE0E901B-AE5E-4505-8DDE-39BD68504F5D}.Debug|ARM.ActiveCfg = Debug|ARM
-		{BE0E901B-AE5E-4505-8DDE-39BD68504F5D}.Debug|ARM.Build.0 = Debug|ARM
-		{BE0E901B-AE5E-4505-8DDE-39BD68504F5D}.Debug|ARM.Deploy.0 = Debug|ARM
+		{BE0E901B-AE5E-4505-8DDE-39BD68504F5D}.Debug|ARM.ActiveCfg = Debug|x64
+		{BE0E901B-AE5E-4505-8DDE-39BD68504F5D}.Debug|ARM.Build.0 = Debug|x64
+		{BE0E901B-AE5E-4505-8DDE-39BD68504F5D}.Debug|ARM.Deploy.0 = Debug|x64
 		{BE0E901B-AE5E-4505-8DDE-39BD68504F5D}.Debug|x64.ActiveCfg = Debug|x64
 		{BE0E901B-AE5E-4505-8DDE-39BD68504F5D}.Debug|x64.Build.0 = Debug|x64
 		{BE0E901B-AE5E-4505-8DDE-39BD68504F5D}.Debug|x64.Deploy.0 = Debug|x64

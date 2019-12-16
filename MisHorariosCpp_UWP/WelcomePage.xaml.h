@@ -25,6 +25,8 @@ namespace MisHorariosCpp_UWP
 	protected:
 		virtual void OnNavigatedTo(NavigationEventArgs^ e) override;
 
+		
+
 	private:
 		MainPage^ rootPage;
 

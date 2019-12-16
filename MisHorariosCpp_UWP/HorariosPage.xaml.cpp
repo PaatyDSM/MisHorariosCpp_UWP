@@ -27,9 +27,6 @@ static string localfolder(w_localfolder.begin(), w_localfolder.end());
 // Function start_fadein_animation
 void HorariosPage::HorariosPage::start_FadeInAnimation(void)
 {
-	// Show Message
-	rootPage->NotifyUser("Consultando horarios...", NotifyType::StatusMessage);
-
 	HorariosPage_FadeInAnimation->Begin();
 }
 
@@ -48,7 +45,6 @@ void HorariosPage::OnNavigatedTo(NavigationEventArgs^ e)
 	// Convert String^ to int
 	wstring w_legajo(((String^)e->Parameter)->Begin());
 	string legajo(w_legajo.begin(), w_legajo.end());
-	int legajo_number = stoi(legajo);
 
 	// CacheControl
 	filter = ref new HttpBaseProtocolFilter();
@@ -58,11 +54,11 @@ void HorariosPage::OnNavigatedTo(NavigationEventArgs^ e)
 	// Initialize httpclient
 	client = ref new HttpClient(filter);
 
-	// Create url with legajo_number
+	// Create url with 'legajo' string
 	string url = "http://proveedores.alsea.com.ar:25080/asignaciones-server/mobile/main/asignaciones/legajos/" + legajo;
 
 	// Save last used legajo
-	save_legajo(legajo);
+	save_last_legajo(legajo);
 
 	// Start Connection Async
 	StartConnectionAsync(url, legajo, 0);
@@ -88,7 +84,7 @@ void HorariosPage::SetBackButton()
 }
 
 // Save last used legajo
-void HorariosPage::save_legajo(string legajo)
+void HorariosPage::save_last_legajo(string legajo)
 {
 	// Write file
 	ofstream out(localfolder + "\\lastlegajo.tmp");
@@ -127,7 +123,7 @@ void HorariosPage::Footer_Click(Object^ sender, RoutedEventArgs^ e)
 // Go back to MainPage with uncleared errors
 void HorariosPage::GoPageBack()
 {
-	///Specific Fix (#bug6161013)
+	///Specific Fix (#bug013)
 	HiddenOutputField->Text = "{\"asignaciones\":[],\"fechaConsulta\":\"\",\"legajo\":\"\"}";
 	DataContext = ref new User(HiddenOutputField->Text);
 
@@ -151,24 +147,37 @@ void HorariosPage::Backbutton1(Object^ sender, RoutedEventArgs^ e)
 }
 
 // Save cache to a file
-void HorariosPage::save_cache(String^ cache)
+void HorariosPage::save_cache(String^ cache, string legajo)
 {
 	// Convert String^ to string
 		wstring w_data(cache->Begin());
 		string s_data(w_data.begin(), w_data.end());
 
-	// Write file
+	// Save last used legajo to a file
 		ofstream out(localfolder + "\\lasthorarios.tmp");
 		if (out)
 		{
 			out << s_data;
 			out.close();
 		}
+
+	// cache legajo
+		ofstream out_c(localfolder + "\\lasthorarios" + legajo + ".tmp");
+		if (out_c)
+		{
+			out_c << s_data;
+			out_c.close();
+		}
+
 }
 
 // Start Connection Async
 void HorariosPage::StartConnectionAsync(string url, string legajo, int retry)
 {
+	// Show Message
+	///Specific Fix (#bug090)
+	rootPage->NotifyUser("Consultando horarios...", NotifyType::StatusMessage);
+
 	// Convert string to String^
 	wstring w_url(url.begin(), url.end());
 	String^ baseUri = ref new String(w_url.c_str());
@@ -206,7 +215,7 @@ void HorariosPage::StartConnectionAsync(string url, string legajo, int retry)
 					rootPage->NotifyUser("Horarios leídos!", NotifyType::StatusMessage);
 
 					// Save cache
-					save_cache(HiddenOutputField->Text);
+					save_cache(HiddenOutputField->Text, legajo);
 
 					// Show ContentPanelInfo
 					ContentPanelInfo->Visibility = Windows::UI::Xaml::Visibility::Visible;
@@ -260,7 +269,7 @@ void HorariosPage::read_cache(string legajo, int database_error)
 {
 	// Read file
 	string data;
-	ifstream in(localfolder + "\\lasthorarios.tmp");
+	ifstream in(localfolder + "\\lasthorarios" + legajo + ".tmp");
 	if (in)
 	{
 		getline(in, data);
@@ -298,7 +307,7 @@ void HorariosPage::read_cache(string legajo, int database_error)
 			{
 				rootPage->NotifyUser("Error. No hay conexión a internet.\nÚltimos horarios leídos de la memoria", NotifyType::ErrorMessage);
 			}
-			
+
 		// Show list
 		List->Visibility = Windows::UI::Xaml::Visibility::Visible;
 	}
