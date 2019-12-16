@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>be0e901b-ae5e-4505-8dde-39bd68504f5d</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>c6578651-9257-48d0-9b27-6750704d33f8</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Sample-Utils">
+      <UniqueIdentifier>{6bdb4f9f-5756-4174-85a0-b8478618947c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\pictures">
+      <UniqueIdentifier>{90b34fe1-d4b3-492c-adb5-01841f2e4bbe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="MainPage.xaml.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="HorariosPage.xaml.cpp" />
+    <ClCompile Include="Common\SuspensionManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="MisHorariosCpp_UWP_MAINAPP.xaml.cpp" />
+    <ClCompile Include="School.cpp" />
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="ReleaseNotes.xaml.cpp" />
+    <ClCompile Include="Sample-Utils\Helpers.cpp">
+      <Filter>Sample-Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample-Utils\PlugInFilter.cpp">
+      <Filter>Sample-Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="MainPage.xaml.h" />
+    <ClInclude Include="HorariosPage.xaml.h" />
+    <ClInclude Include="Common\SuspensionManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MisHorariosCpp_UWP_MAINAPP.xaml.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="School.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="ReleaseNotes.xaml.h" />
+    <ClInclude Include="Sample-Utils\Helpers.h">
+      <Filter>Sample-Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Sample-Utils\PlugInFilter.h">
+      <Filter>Sample-Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-256.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\pictures\logo_main.png">
+      <Filter>Assets\pictures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainPage.xaml" />
+    <Page Include="HorariosPage.xaml" />
+    <Page Include="MisHorariosCpp_UWP_MAINAPP.xaml" />
+    <Page Include="Styles.xaml" />
+    <Page Include="ReleaseNotes.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MisHorariosCpp_UWP.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MisHorariosCpp_UWP_TemporaryKey.pfx" />
+  </ItemGroup>
+</Project>
