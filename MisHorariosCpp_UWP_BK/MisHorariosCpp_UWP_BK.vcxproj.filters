@@ -5,14 +5,14 @@
       <UniqueIdentifier>c6578651-9257-48d0-9b27-6750704d33f8</UniqueIdentifier>
       <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
     </Filter>
-    <Filter Include="..\MisHorariosCpp_UWP\Sample-Utils">
-      <UniqueIdentifier>{6bdb4f9f-5756-4174-85a0-b8478618947c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Assets\pictures">
       <UniqueIdentifier>{90b34fe1-d4b3-492c-adb5-01841f2e4bbe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="..\MisHorariosCpp_UWP\JSon_manageData">
-      <UniqueIdentifier>{20262345-d0af-4baa-949d-917297a4386b}</UniqueIdentifier>
+    <Filter Include="JSon_manageData">
+      <UniqueIdentifier>{69ddb9da-a554-40ad-b1bd-985209f6baa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sample-Utils">
+      <UniqueIdentifier>{4bd3967e-c2b4-4931-85e3-bf2028d598e8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -21,37 +21,36 @@
   <ItemGroup>
     <ClCompile Include="..\MisHorariosCpp_UWP\App.xaml.cpp" />
     <ClCompile Include="..\MisHorariosCpp_UWP\MainPage.xaml.cpp" />
-    <ClCompile Include="..\MisHorariosCpp_UWP\pch.cpp" />
     <ClCompile Include="..\MisHorariosCpp_UWP\HorariosPage.xaml.cpp" />
     <ClCompile Include="..\MisHorariosCpp_UWP\ReleaseNotesPage.xaml.cpp" />
     <ClCompile Include="..\MisHorariosCpp_UWP\WelcomePage.xaml.cpp" />
-    <ClCompile Include="..\MisHorariosCpp_UWP\JSon_manageData\User.cpp">
+    <ClCompile Include="..\MisHorariosCpp_UWP\JSon_manageData\WorkDays.cpp">
       <Filter>JSon_manageData</Filter>
     </ClCompile>
-    <ClCompile Include="..\MisHorariosCpp_UWP\JSon_manageData\WorkDays.cpp">
+    <ClCompile Include="..\MisHorariosCpp_UWP\JSon_manageData\User.cpp">
       <Filter>JSon_manageData</Filter>
     </ClCompile>
     <ClCompile Include="..\MisHorariosCpp_UWP\Sample-Utils\Helpers.cpp">
       <Filter>Sample-Utils</Filter>
     </ClCompile>
+    <ClCompile Include="..\MisHorariosCpp_UWP\pch.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\MisHorariosCpp_UWP\pch.h" />
     <ClInclude Include="..\MisHorariosCpp_UWP\App.xaml.h" />
     <ClInclude Include="..\MisHorariosCpp_UWP\MainPage.xaml.h" />
     <ClInclude Include="..\MisHorariosCpp_UWP\HorariosPage.xaml.h" />
-    <ClInclude Include="..\MisHorariosCpp_UWP\resource.h" />
     <ClInclude Include="..\MisHorariosCpp_UWP\ReleaseNotesPage.xaml.h" />
     <ClInclude Include="..\MisHorariosCpp_UWP\WelcomePage.xaml.h" />
-    <ClInclude Include="..\MisHorariosCpp_UWP\JSon_manageData\User.h">
+    <ClInclude Include="..\MisHorariosCpp_UWP\JSon_manageData\WorkDays.h">
       <Filter>JSon_manageData</Filter>
     </ClInclude>
-    <ClInclude Include="..\MisHorariosCpp_UWP\JSon_manageData\WorkDays.h">
+    <ClInclude Include="..\MisHorariosCpp_UWP\JSon_manageData\User.h">
       <Filter>JSon_manageData</Filter>
     </ClInclude>
     <ClInclude Include="..\MisHorariosCpp_UWP\Sample-Utils\Helpers.h">
       <Filter>Sample-Utils</Filter>
     </ClInclude>
+    <ClInclude Include="..\MisHorariosCpp_UWP\pch.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">
@@ -267,9 +266,6 @@
     <Page Include="HorariosPage.xaml" />
     <Page Include="ReleaseNotesPage.xaml" />
     <Page Include="WelcomePage.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="..\MisHorariosCpp_UWP\MisHorariosCpp_UWP.rc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\MisHorariosCpp_UWP\MisHorariosCpp_UWP_TemporaryKey.pfx" />

@@ -1,7 +1,7 @@
 ﻿#pragma once
 
-#include "WorkDays.h"
-#include "MainPage.xaml.h"
+#include "..\MisHorariosCpp_UWP\JSon_manageData\WorkDays.h"
+#include "..\MisHorariosCpp_UWP\MainPage.xaml.h"
 
 using namespace Platform;
 using namespace Platform::Collections;

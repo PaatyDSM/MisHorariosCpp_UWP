@@ -11,7 +11,7 @@
 #include <msxml6.h>
 #include <wrl.h>
 
-#include "App.xaml.h"
+#include "..\MisHorariosCpp_UWP\App.xaml.h"
 
-#include "JSon_manageData\User.h"
-#include "JSon_manageData\WorkDays.h"
+#include "..\MisHorariosCpp_UWP\JSon_manageData\User.h"
+#include "..\MisHorariosCpp_UWP\JSon_manageData\WorkDays.h"

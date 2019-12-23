@@ -1,6 +1,6 @@
-﻿#include "pch.h"
-#include "MainPage.xaml.h"
-#include "WelcomePage.xaml.h"
+﻿#include "..\MisHorariosCpp_UWP\pch.h"
+#include "..\MisHorariosCpp_UWP\MainPage.xaml.h"
+#include "..\MisHorariosCpp_UWP\WelcomePage.xaml.h"
 
 using namespace MisHorariosCpp_UWP;
 using namespace std;

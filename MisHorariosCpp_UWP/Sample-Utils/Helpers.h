@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "pch.h"
+#include "..\MisHorariosCpp_UWP\pch.h"
 
 using namespace concurrency;
 using namespace Windows::UI::Xaml::Controls;

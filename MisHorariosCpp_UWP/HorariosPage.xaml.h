@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #include "HorariosPage.g.h"
-#include "WelcomePage.xaml.h"
+#include "..\MisHorariosCpp_UWP\WelcomePage.xaml.h"
 
 using namespace std;
 using namespace Windows::Web::Http;

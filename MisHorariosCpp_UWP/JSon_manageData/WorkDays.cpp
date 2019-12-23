@@ -1,5 +1,5 @@
-﻿#include "pch.h"
-#include "WorkDays.h"
+﻿#include "..\MisHorariosCpp_UWP\pch.h"
+#include "..\MisHorariosCpp_UWP\JSon_manageData\WorkDays.h"
 
 using namespace MisHorariosCpp_UWP;
 

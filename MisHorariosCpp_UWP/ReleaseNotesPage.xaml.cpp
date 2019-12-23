@@ -1,7 +1,7 @@
-﻿#include "pch.h"
+﻿#include "..\MisHorariosCpp_UWP\pch.h"
 
-#include "ReleaseNotesPage.xaml.h"
-#include "MainPage.xaml.h"
+#include "..\MisHorariosCpp_UWP\ReleaseNotesPage.xaml.h"
+#include "..\MisHorariosCpp_UWP\MainPage.xaml.h"
 
 using namespace MisHorariosCpp_UWP;
 
@@ -73,6 +73,9 @@ void ReleaseNotesPage::Footer_Click(Object^ sender, RoutedEventArgs^ e)
 void ReleaseNotesPage::LoadReleaseNotes(void)
 {
 	Notes->Text =
+		"V1.53\n"
+		"*Merge Mis Horarios SBX and BK together in the same solution.\n"
+		"*Added support for ARM64 platform.\n"
 		"V1.47\n"
 		"*Fixed crash in MainPage.\n"
 		"*Cache multiple legajos.\n"

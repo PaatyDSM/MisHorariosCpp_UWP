@@ -1,8 +1,8 @@
-﻿#include "pch.h"
-#include "WelcomePage.xaml.h"
-#include "HorariosPage.xaml.h"
-#include "ReleaseNotesPage.xaml.h"
-#include "Sample-Utils\Helpers.h"
+﻿#include "..\MisHorariosCpp_UWP\pch.h"
+#include "..\MisHorariosCpp_UWP\WelcomePage.xaml.h"
+#include "..\MisHorariosCpp_UWP\HorariosPage.xaml.h"
+#include "..\MisHorariosCpp_UWP\ReleaseNotesPage.xaml.h"
+#include "..\MisHorariosCpp_UWP\Sample-Utils\Helpers.h"
 #include <fstream>
 #include <thread>
 #include <pplawait.h>

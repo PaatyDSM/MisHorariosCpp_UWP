@@ -1,7 +1,7 @@
-﻿#include "pch.h"
+﻿#include "..\MisHorariosCpp_UWP\pch.h"
 
-#include "Sample-Utils\Helpers.h"
-#include <MainPage.xaml.h>
+#include "..\MisHorariosCpp_UWP\Sample-Utils\Helpers.h"
+#include "..\MisHorariosCpp_UWP\MainPage.xaml.h"
 
 using namespace MisHorariosCpp_UWP;
 
@@ -30,4 +30,3 @@ task<HttpResponseMessage^> Helpers::DisplayTextResultAsync(
     },
 		task_continuation_context::use_current());
 }
-

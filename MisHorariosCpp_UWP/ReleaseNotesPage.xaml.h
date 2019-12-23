@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #include "ReleaseNotesPage.g.h"
-#include "WelcomePage.xaml.h"
+#include "..\MisHorariosCpp_UWP\WelcomePage.xaml.h"
 
 namespace MisHorariosCpp_UWP
 {
