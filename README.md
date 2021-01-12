@@ -27,11 +27,14 @@ https://www.microsoft.com/es-ar/p/mis-horarios-sbx/9nmsm40d0c7k?activetab=pivot:
 
 Windows 10 versión 10586.0 o posterior, Xbox One.
 
-Arquitectura 	ARM, x64, x86.
+Arquitectura 	ARM, x64, x86 y ARM64.
 
 
 ## Notas de versión:
+V1.53:
 
+    *Fusiona Mis Horarios SBX y BK en la misma solución.
+    *Soporte agregado para la plataforma ARM64.
   
 #
 # Desarrollado por PaatyDSM Apps
