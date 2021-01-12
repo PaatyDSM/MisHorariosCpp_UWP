@@ -13,9 +13,12 @@ Consultá tus horarios laborales ingresando tu legajo.
 Disponible en: Xbox Series X|S, Xbox One, HoloLens, PC, Dispositivo móvil, Surface Hub.
 
 ## Descarga en la Micrososft Store:
-###Mis Horarios BK:
+### Mis Horarios BK:
+
 https://www.microsoft.com/es-ar/p/mis-horarios-bk/9np1996x9mz9?activetab=pivot:overviewtab
-###Mis Horarios SBX:
+
+### Mis Horarios SBX:
+
 https://www.microsoft.com/es-ar/p/mis-horarios-sbx/9nmsm40d0c7k?activetab=pivot:overviewtab
 
 *Solo disnpoibles en Argentina
