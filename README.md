@@ -14,14 +14,12 @@ Disponible en: Xbox Series X|S, Xbox One, HoloLens, PC, Dispositivo móvil, Surf
 
 ## Descarga en la Micrososft Store:
 ### Mis Horarios BK:
-
 https://www.microsoft.com/es-ar/p/mis-horarios-bk/9np1996x9mz9?activetab=pivot:overviewtab
 
 ### Mis Horarios SBX:
-
 https://www.microsoft.com/es-ar/p/mis-horarios-sbx/9nmsm40d0c7k?activetab=pivot:overviewtab
 
-*Solo disnpoibles en Argentina
+*Solo disponibles en Argentina
 
 Requisitos:
 Windows 10 versión 10586.0 o posterior, Xbox One.
