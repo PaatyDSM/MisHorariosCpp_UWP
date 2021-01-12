@@ -1,4 +1,4 @@
-*Actualización: El proyecto está discontinuado, se ha movido y es mantenido en: https://github.com/PaatyDSM/MisHorarios
+ACTUALIZACIÓN: El proyecto está discontinuado, se ha movido y es mantenido en: https://github.com/PaatyDSM/MisHorarios
 
 # Mis Horarios
 El proyecto actual es una unificación de dos proyectos anteriores:
